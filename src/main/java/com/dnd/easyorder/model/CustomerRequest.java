@@ -1,13 +1,11 @@
 package com.dnd.easyorder.model;
 
-public class CustomerResponse {
+public class CustomerRequest {
 
     private String name;
 
     private String phone;
 
-    public CustomerResponse() {
-    }
     public String getName() {
         return name;
     }
@@ -23,4 +21,6 @@ public class CustomerResponse {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    // getters/setters
 }

@@ -1,9 +1,12 @@
 package com.dnd.easyorder.controller;
 
+import com.dnd.easyorder.model.PlaceOrderRequest;
+import com.dnd.easyorder.model.PlaceOrderResponse;
 import com.dnd.easyorder.model.OrderHistoryResponse;
 import com.dnd.easyorder.service.CustomerService;
 import com.dnd.easyorder.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -35,5 +38,15 @@ public class OrderController {
                     .internalServerError()
                     .build();
         }
+    }
+
+    @PostMapping("/placeOrder")
+    public ResponseEntity<PlaceOrderResponse> placeOrder(@RequestBody PlaceOrderRequest request){
+        PlaceOrderResponse response =
+                orderService.placeOrder(request);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(response);
     }
 }

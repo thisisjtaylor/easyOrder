@@ -2,9 +2,7 @@ package com.dnd.easyorder.service;
 
 import com.dnd.easyorder.entity.Customer;
 import com.dnd.easyorder.entity.Order;
-import com.dnd.easyorder.model.CustomerResponse;
-import com.dnd.easyorder.model.OrderHistoryResponse;
-import com.dnd.easyorder.model.OrderItemResponse;
+import com.dnd.easyorder.model.*;
 import com.dnd.easyorder.repo.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +31,12 @@ public class OrderServiceImpl implements OrderService {
                 .map(this::mapOrderToResponse)
                 .toList();
     }
+
+    @Override
+    public PlaceOrderResponse placeOrder(PlaceOrderRequest request) {
+        return null;
+    }
+
     public OrderHistoryResponse mapOrderToResponse(Order order) {
 
         OrderHistoryResponse response = new OrderHistoryResponse();

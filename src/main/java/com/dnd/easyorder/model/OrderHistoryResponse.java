@@ -6,10 +6,15 @@ import java.util.List;
 public class OrderHistoryResponse {
 
     private Long id;
+
     private CustomerResponse customer;
+
     private List<OrderItemResponse> items;
+
     private LocalDate pickupDate;
+
     private String status;
+
     private String summaryNotes;
 
     public OrderHistoryResponse() {

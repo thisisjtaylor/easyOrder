@@ -2,18 +2,15 @@ package com.dnd.easyorder.model;
 
 import java.math.BigDecimal;
 
-public class OrderItemResponse {
+public class OrderItemRequest {
 
     private String productName;
 
     private BigDecimal quantity;
 
     private String unit;
-
+    
     private String note;
-
-    public OrderItemResponse() {
-    }
 
     public String getProductName() {
         return productName;
@@ -46,4 +43,6 @@ public class OrderItemResponse {
     public void setNote(String note) {
         this.note = note;
     }
+
+    // getters/setters
 }

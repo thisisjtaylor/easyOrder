@@ -9,7 +9,7 @@ public class OrderItemRequest {
     private BigDecimal quantity;
 
     private String unit;
-    
+
     private String note;
 
     public String getProductName() {
@@ -43,6 +43,4 @@ public class OrderItemRequest {
     public void setNote(String note) {
         this.note = note;
     }
-
-    // getters/setters
 }

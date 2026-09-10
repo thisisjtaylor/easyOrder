@@ -21,6 +21,4 @@ public class CustomerRequest {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    // getters/setters
 }
